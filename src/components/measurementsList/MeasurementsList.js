@@ -15,22 +15,16 @@ constructor(props) {
 componentDidMount() {
     let  self  =  this;
     measurementsService.getMeasurements().then(function (result) {
-        self.setState({ measurements: result.data })
+        self.setState({ measurements: result })
     });
 }
 
 
-render() {
-    return (
-	  <div>
-	    {this.state.measurements.map( c =>
-
-
-		    <div>
-		    <h2>{c.name}</h2>
-		    </div>
-
-	    )}
+    render() {
+	console.log(this.state.measurements);
+	return (
+	    <div>
+		<h2>{this.state.measurements.name}</h2>
 	    </div>
         );
 }
