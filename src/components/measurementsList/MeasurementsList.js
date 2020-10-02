@@ -25,6 +25,8 @@ componentDidMount() {
 	return (
 	    <div>
 		<h2>{this.state.measurements.name}</h2>
+		<h2>{this.state.measurements.temperature}</h2>
+		<h2>{this.state.measurements.humidity}</h2>
 	    </div>
         );
 }
